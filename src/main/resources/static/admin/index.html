@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/admin/">
+    <title>Upload Service Admin Console</title>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../bower_components/angular-toastr/dist/angular-toastr.min.css" rel="stylesheet" type="text/css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-toastr/dist/angular-toastr.min.js"></script>
+    <script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+    <style>
+        a{cursor: pointer}
+    </style>
+</head>
+<body>
+<div ng-app="myApp" ng-view></div>
+<script src="admin.js"></script>
+<script>
+    angular.module("myApp", ["myApp.admin"])
+</script>
+</body>
+</html>

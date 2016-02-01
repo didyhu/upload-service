@@ -1,0 +1,38 @@
+<div class="container-fluid" ng-init="init()">
+
+    <div class="form">
+        <div class="form-group">
+            <label>Upload</label>
+            <input type="file" ng-model="file" file-change="fileChange(file)"/>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Domain</th>
+            <th>File Name</th>
+            <th>Content Type</th>
+            <th>Content Length</th>
+            <th>Uploaded Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="upload in uploads.content">
+            <td><a href="/upload/{{upload.id}}">{{upload.id}}</a></td>
+            <td>{{upload.domain}}</td>
+            <td>{{upload.filename}}</td>
+            <td>{{upload.contentType}}</td>
+            <td>{{upload.contentLength | number}}</td>
+            <td>{{upload.createdTime|date:"yyyy-MM-dd HH:mm:ss"}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="100">
+                <ul pagination="uploads" class="pagination" changing="changePage(page)"></ul>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
